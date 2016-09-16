@@ -1,0 +1,37 @@
+<div class="navbar navbar-inverse" role="navigation">  
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".irb-navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand">HC IRB</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse irb-navbar-collapse">
+    <ul class="nav navbar-nav"> 
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="user"></span> <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="/~altermattw/IRB/php/userAccount.php">Account Info</a></li>
+            <li><a href="/~altermattw/IRB/php/userApps.php">Applications</a></li>
+          </ul>
+      </li>
+      <li>
+        <a href="/~altermattw/IRB/contact.html" target="_blank">Contact</a>
+      </li>                       
+    <!-- <span class="navbar-text" id="user"></span>  -->   
+    </ul>  
+    <button class="btn btn-default btn-small navbar-btn navbar-right" id="logoutBtn" href="/~altermattw/IRB/php/logout.php">Logout</button>
+  </div><!-- /.navbar-collapse -->
+  <script>
+    $('#logoutBtn').click(function () {
+      if( confirm("Logout of IRB session?") ) {
+        window.location = "http://vault.hanover.edu/~altermattw/IRB/php/logout.php";
+      }
+      return false;      
+    });
+  </script>
+</div>

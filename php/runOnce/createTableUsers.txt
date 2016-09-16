@@ -1,0 +1,27 @@
+CREATE TABLE `users` (
+	`email` VARCHAR(100) NOT NULL,
+	`lastName` VARCHAR(50) NULL DEFAULT NULL,
+	`firstName` VARCHAR(50) NULL DEFAULT NULL,
+	`status` VARCHAR(50) NULL DEFAULT NULL COMMENT 'student, faculty, other',
+	`password` VARCHAR(61) NULL DEFAULT NULL COMMENT 'Stored as a hash.',
+	`hash` VARCHAR(33) NULL DEFAULT NULL COMMENT 'Used for account validation.',
+	`validated` TINYINT(4) NULL DEFAULT NULL COMMENT '0 at first, 1 after email validation',
+	`changeTime` INT(11) UNSIGNED NULL DEFAULT NULL COMMENT 'Timestamp when password change requested. Used to time out password change.',
+	`changeHash` VARCHAR(50) NULL DEFAULT NULL COMMENT 'Hash for password change.',
+	`lastLogin` INT(11) NULL DEFAULT NULL COMMENT 'Timestamp of last login.',
+	`apps` VARCHAR(50) NULL DEFAULT NULL COMMENT 'Comma-separated list of app numbers: 2015001,2015006,2016003',
+	`badLogin1` INT(11) NULL DEFAULT NULL,
+	`badLogin2` INT(11) NULL DEFAULT NULL,
+	`badLogin3` INT(11) NULL DEFAULT NULL,
+	`badLogin4` INT(11) NULL DEFAULT NULL,
+	`badLogin5` INT(11) NULL DEFAULT NULL,
+	`message1` VARCHAR(5000) NULL DEFAULT NULL,
+	`message2` VARCHAR(5000) NULL DEFAULT NULL,
+	`message3` VARCHAR(5000) NULL DEFAULT NULL,
+	`message4` VARCHAR(5000) NULL DEFAULT NULL,
+	`message5` VARCHAR(5000) NULL DEFAULT NULL,
+	PRIMARY KEY (`email`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;

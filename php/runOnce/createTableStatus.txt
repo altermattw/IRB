@@ -1,0 +1,11 @@
+CREATE TABLE `status` (
+	`studyNumber` INT(7) NULL DEFAULT NULL,
+	`status` VARCHAR(50) NULL DEFAULT '"first draft"' COMMENT '"first draft","submitted to co-authors","co-author approval","co-author revision","submitted to faculty sponsor","faculty sponsor approval","faculty sponsor revision","submitted to IRB","IRB revision","IRB approval","withdrawn"',
+	`email` VARCHAR(50) NULL DEFAULT NULL COMMENT 'email address of person who updated the status field',
+	`time` INT(11) NULL DEFAULT NULL,
+	`comments` TEXT NULL COMMENT 'to be used for revision status'
+)
+COMMENT='Every time there is a change in a study\'s status, that information is recorded here. So, studyNumber may have many entries for the same study, 1 for each status update.'
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;

@@ -1,0 +1,10 @@
+CREATE TABLE `current` (
+	`studyNumber` INT(7) NOT NULL AUTO_INCREMENT,
+	`status` VARCHAR(50) NULL DEFAULT NULL,
+	`email` VARCHAR(50) NULL DEFAULT NULL,
+	`time` INT(11) NULL DEFAULT NULL,
+	PRIMARY KEY (`studyNumber`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;

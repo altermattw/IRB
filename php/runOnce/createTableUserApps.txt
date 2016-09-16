@@ -1,0 +1,10 @@
+CREATE TABLE `userapps` (
+	`email` VARCHAR(75) NULL DEFAULT NULL,
+	`name` VARCHAR(100) NULL DEFAULT NULL,
+	`role` VARCHAR(25) NULL DEFAULT NULL COMMENT 'author,sponsor,or IRB',
+	`studyNumber` INT(7) NULL DEFAULT NULL
+)
+COMMENT='Table with columns: email, name, role, and studyNumber. Email is an email address, including the \'@hanover.edu\'.  Role is "author" (including co-author) of application, faculty "sponsor" of application, or "IRB" reviewer assigned to application.  Study numbers are 7-digit numbers of the format 2015001, where the first 4 numbers are the year and the rest of the numbers are 0-padded incrementing values.  Neither \'email\' nor \'studyNumber\' contain unique values:  if an email address appears in 4 separate studies, then there are 4 rows with that email address.  '
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
