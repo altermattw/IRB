@@ -489,7 +489,7 @@ if (! function_exists('array_column')) {
 			sponsorEmail VARCHAR(100) NULL DEFAULT NULL,
 			sponsorApproval INT(11) NULL DEFAULT NULL,
 			sponsorFeedback TEXT NULL,
-			courseDept VARCHAR(6) NULL DEFAULT NULL,
+			courseDept VARCHAR(5) NULL DEFAULT NULL,
 			courseNum SMALLINT(3) NULL DEFAULT NULL,
 			IRBapproval INT(11) NULL DEFAULT NULL,
 			IRBreviewers VARCHAR(1000) NULL DEFAULT NULL,
