@@ -68,7 +68,7 @@
 		$message .= '</body></html>';
 		$feedback = "";
 		if(mail($email,$subject,$message,$headers)) {
-         $feedback = '<p>An email message has been sent to '.$email.'. Please check your email and click the link in the email to verify your email address and finalize your registration.</p>';
+         $feedback = '<p>An email message has been sent to '.$email.'. Please check your email and click the link in the email to verify your email address and finalize your registration. <strong>You may need to check your Junk or Clutter folders.</strong></p>';
 		} else {
 			$feedback = '<p>There was a problem sending the verification email to '.$email.'. Please check that address to make sure it is correct and <a href="register.html">try again</a>. If you continue to have problems, please contact the IRB webmaster, '.$WM["name"].' at '.$WM["email"].'. Sorry for the inconvenience.</p>';
 		}
