@@ -1,15 +1,15 @@
-<div class="panel panel-default"> <!-- informed consent panel -->	
-	<div class="panel-body form-group"> 		
+<div class="panel panel-default"> <!-- informed consent panel -->
+	<div class="panel-body form-group">
 		<div class="col-sm-12">
 			<label>2.1. Will you be obtaining informed consent from participants before their participation begins?</label>
 			<div class="radio"><!-- Yes -->
 				<label>
 					<input type="radio" name="infConsent" class="expand" value="1">Yes.
-				</label>				
-				<div class="panel panel-default infConsent" id="infConsent1" hidden>				
-					<div class="panel-body">									
+				</label>
+				<div class="panel panel-default infConsent" id="infConsent1" hidden>
+					<div class="panel-body">
 						<label>2.1.1. Please paste the text of your informed consent into the text area below:</label>
-						<textarea name="infConsentText" class="form-control countable" rows="5"></textarea>						
+						<textarea name="infConsentText" class="form-control countable" rows="5"></textarea>
 						<label>2.1.2. Will you be obtaining participants&rsquo; written signatures on an informed consent form?</label>
 						<div><!-- Yes -->
 							<label class="radio-inline">
@@ -17,41 +17,41 @@
 							</label>
 							<div class="panel panel-default infConsSig" id="infConsSig1" hidden>
 								<div class="panel-body">
-									<label>2.1.2.1. Could those signatures pose a risk to participants? That is, if people knew that a particular person was in your study, would that information pose any risk to that person&rsquo;s reputation, liability to prosecution, employability, financial standing, or insurability?  (For example, if all your participants were selected because they reported illegal drug use, their signature on an informed consent form could pose a risk and you should answer &ldquo;Yes&rdquo; to this question.)</label>							
+									<label>2.1.2.1. Could those signatures pose a risk to participants? That is, if people knew that a particular person was in your study, would that information pose any risk to that person&rsquo;s reputation, liability to prosecution, employability, financial standing, or insurability?  (For example, if all your participants were selected because they reported illegal drug use, their signature on an informed consent form could pose a risk and you should answer &ldquo;Yes&rdquo; to this question.)</label>
 									<div>
 										<label class="radio-inline">
 											<input type="radio" class="expand alert" name="infConsRisk" value="1">Yes.
 										</label>
-										<div class="panel panel-default infConsRisk" id="infConsRisk1" hidden>									
-											<div class="panel-body">									
+										<div class="panel panel-default infConsRisk" id="infConsRisk1" hidden>
+											<div class="panel-body">
 												<label>2.1.2.1.1. What steps will you take to ensure that the informed consent forms are not publicly disclosed?</label>
 												<textarea id="infConsRiskText" name="infConsRiskText" class="form-control countable" rows="5"></textarea>
 												<h5><small>Word Count: <span class="count"></span></small></h5>
 											</div>
-										</div>													
+										</div>
 										<label class="radio-inline">
 											<input type="radio" class="expand" name="infConsRisk" value="0">No.
 										</label>
-									</div>							
+									</div>
 								</div>
-							</div>				
+							</div>
 							<label class="radio-inline">
 								<input type="radio" class="expand" name="infConsSig" value="0">No.
 							</label>
 							<div class="panel-body infConsSig" id="infConsSig0" hidden>
 								<label>2.1.2.2. How will you be obtaining informed consent, if not through a signed informed consent form?</label>
-								<textarea name="otherInfConsent" class="form-control countable" rows="5"></textarea>					
+								<textarea name="otherInfConsent" class="form-control countable" rows="5"></textarea>
 							</div>
-						</div>													
+						</div>
 					</div>
-				</div>					
+				</div>
 			</div>
 			<div class="radio"><!-- No -->
 				<label>
 					<input type="radio" name="infConsent" class="expand" value="0">No.
 				</label>
 				<div id="infConsent0" class="infConsent" hidden>
-					<div class="panel-body"> 
+					<div class="panel-body">
 						<label class="control-label">2.1.3. Why will you not be obtaining informed consent? (check all that apply)</label>
 						<div class="col-sm-10 checkbox">
 							<label>
@@ -86,19 +86,19 @@
 				<label>
 					<input type="radio" class="expand" name="debriefing" value="1">Yes.
 				</label>
-				<div class="panel panel-default" class="debriefing" id="debriefing1" hidden>				
-					<div class="panel-body">									
+				<div class="panel panel-default" class="debriefing" id="debriefing1" hidden>
+					<div class="panel-body">
 						<label>2.2.1. Please paste the text of your debriefing into the text area below:</label>
-						<textarea name="debriefText" class="form-control countable" rows="5"></textarea>						
+						<textarea name="debriefText" class="form-control countable" rows="5"></textarea>
 					</div>
-				</div>		
+				</div>
 			</div>
 			<div class="radio"><!-- No -->
 				<label>
 					<input type="radio" class="expand" name="debriefing" value="0">No.
 				</label>
 				<div id="debriefing0" class="debriefing" hidden>
-					<div class="panel-body"> 
+					<div class="panel-body">
 						<label class="control-label">2.2.2. Why will you not debrief participants?</label>
 						<input type="text" class="form-control" name="whyNoDebriefText" id="whyNoDebriefText">
 					</div>
@@ -112,9 +112,9 @@
 		<div class="panel-heading">
 			<h3 class="panel-title">2.3. Links to webpages (optional)</h3>
 		</div>
-		<div class="panel-body">									
+		<div class="panel-body">
 			If any of your materials (e.g., survey, images) are online, you may paste the URLs (web address, beginning "http://...") to those materials below. Please introduce each link with a sentence.
-			<textarea id="links" name="links" class="form-control" rows="3"></textarea>				
+			<textarea id="links" name="links" class="form-control" rows="3"></textarea>
 		</div>
 	</div>
 </div> <!-- end links -->
@@ -122,11 +122,14 @@
 	<div class="panel panel-default form-group">
 		<div class="panel-heading">
 			<h3 class="panel-title">Supporting files</h3>
-		</div>		
+		</div>
 		<div class="panel-body">
 			<?php
 				$uploaddir = 'upload/'.$_SESSION["studyNumber"];
-				if(!file_exists($uploaddir)) {					
+				if(!file_exists($uploaddir)) {
+					// checking ownership of upload directory:
+					// $processUser = posix_getpwuid(posix_geteuid());
+				   //   echo($processUser['name']);
 					mkdir($uploaddir);
 				}
 				if(isset($_GET["delete"])) {
@@ -141,19 +144,19 @@
 				}
 			// process newly uploaded files
 				if(!empty($_FILES)) {
-					if(file_exists($_FILES['userfile']['tmp_name']) || is_uploaded_file($_FILES['userfile']['tmp_name'])) {												
+					if(file_exists($_FILES['userfile']['tmp_name']) || is_uploaded_file($_FILES['userfile']['tmp_name'])) {
 						$uploadfile = $uploaddir . '/'. basename($_FILES['userfile']['name']);
-						if(move_uploaded_file($_FILES["userfile"]["tmp_name"],$uploadfile)) {		        
+						if(move_uploaded_file($_FILES["userfile"]["tmp_name"],$uploadfile)) {
 			        echo '<p>File upload successful for '.basename($_FILES['userfile']['name']).'</p>';
 			      } else {
 			        echo '<p>File upload error: <a href="http://php.net/manual/en/features.file-upload.errors.php">'.$_FILES["userfile"]["error"].'</a></p>';
-			      }   
+			      }
 					}
 				}
 			?>
-			<h4>Currently uploaded files</h4>			
+			<h4>Currently uploaded files</h4>
 			<?php
-				// display currently uploaded files					
+				// display currently uploaded files
 					if(file_exists($uploaddir)) {
 						$iterator = new \FilesystemIterator($uploaddir);
 						if(!$iterator->valid()) {
@@ -165,20 +168,23 @@
 						    echo '<br>Filesize: '.filesize($file);
 						    echo '<br>Last modified: '.date("F d, Y H:i:s", filemtime($file)).'</li>';
 						    // add a button to delete the file
-						    
-							}	
-							echo '</ol>';				
-						}	
+
+							}
+							echo '</ol>';
+						}
 					} else {
 						echo '<p>No files uploaded</p>';
-					}					
-			?>			
+					}
+			?>
 		</div>
 		<div class="panel-body">
 			<h4>Upload new file</h4>
-			<p>To upload a file, select the filename using the button below and then click the Save button at the bottom of the page. You should see the uploaded file added to the list above. If the uploaded file has the same name as a previously uploaded file, the previously uploaded file will be replaced.</p>
+			<p>To upload a file, select the filename using the button below and then click the Upload button below or the Save button at the bottom of the page. You should see the uploaded file added to the list above. If the uploaded file has the same name as a previously uploaded file, the previously uploaded file will be replaced.</p>
 			<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
 			<input id="fileupload" type="file" name="userfile">
+			<div class="col-xs-12" style="height:20px;"></div>
+			<button type="submit" id="uploadButton" class="btn btn-primary" name="submit" value="2" >Upload</button>
+
 		</div>
 	</div>
 </div>
