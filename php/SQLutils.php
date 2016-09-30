@@ -1094,7 +1094,8 @@ function validateUser($userid) // called if the login is successful
 			"jacks@hanover.edu",
 			"bruyninckx@hanover.edu",
 			"vosm@hanover.edu",
-			"altermattw@hanover.edu"
+			"altermattw@hanover.edu",
+			"ryle@hanover.edu"
 			);
 		if(in_array($userid,$administrators)) { // does user have admin privileges?
 			$_SESSION['admin'] = 1;
