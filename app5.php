@@ -147,8 +147,8 @@
 					} else {
 						$message.='<p>There was a problem changing the status to &ldquo;IRB Approval&rdquo;. Status not changed.</p>';
 					}
-				}
-				if($status=="Submitted to Faculty Sponsor" && $_SESSION["userid"]==current(array_keys($approved["sponsor"]))) {
+			}
+			if($status=="Submitted to Faculty Sponsor" && $_SESSION["userid"]==current(array_keys($approved["sponsor"]))) {
 					// Approve application
 					if(setStatus($mysql,$_SESSION["studyNumber"],"Faculty Sponsor Approval",$_SESSION["userid"])) {
 						setStatus($mysql,$_SESSION["studyNumber"],"Submitted to IRB",$_SESSION["userid"]); // upgrading to submitted to IRB
@@ -296,6 +296,9 @@
 						$message.='<button type="submit" class="btn btn-success" name="submit" value="submit">Submit</button>';
 					} else { // user is not an author
 						$message.='<p>This application is in its first draft. Once the authors are satisfied that the application is complete, they may submit the application. If there are any co-authors, they will be notified by email and invited to review the application. After all co-authors have approved the application, it will then be submitted either to the faculty sponsor listed on the application or to the IRB for its review. If you have any questions about this process, please contact the chair of the IRB, '.$chair["name"].', at '.$chair["email"].'.</p>';
+						if(isAdmin() || $_SESSION["userid"]==current(array_keys($approved["IRB"]))) {
+							$message.=$revisionsNeeded;
+						}
 					}
 					break;
 				case "Revision":
@@ -317,6 +320,9 @@
 					$message.=$revisionsNeeded;
 					} else { // user is not a co-author
 						$message.='<p>This application has been submitted to co-authors for their approval. After all co-authors have approved the application, it will then be submitted either to the faculty sponsor listed on the application or to the IRB for its review. If you have any questions about this process, please contact the chair of the IRB, '.$chair["name"].', at '.$chair["email"].'.</p>';
+						if(isAdmin() || $_SESSION["userid"]==current(array_keys($approved["IRB"]))) {
+							$message.=$revisionsNeeded;
+						}
 					}
 					break;
 				case "Submitted to Faculty Sponsor":
@@ -330,6 +336,9 @@
 							$message.=$revisionsNeeded;
 						} else { // user is neither faculty sponsor nor author
 							$message.='<p>The application is currently under review by the faculty sponsor. Once the faculty sponsor has approved the application, it will be forwarded to the IRB for final review. If the faculty sponsor believes that revisions need to be made, then the authors of the application will be contacted and invited to make changes before resubmitting it to their faculty supervisor.</p>';
+							if(isAdmin() || $_SESSION["userid"]==current(array_keys($approved["IRB"]))) {
+								$message.=$revisionsNeeded;
+							}
 						}
 					}
 					break;
