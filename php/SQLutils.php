@@ -661,6 +661,7 @@ if (! function_exists('array_column')) {
 						preg_match('/(?<=Author)\d{1,2}/',$key,$matches); // captures the author number, stored in $matches
 						$i=$matches[0];
 						if(substr($key,-1,1) == 'D') {
+							$val = strtolower($val);
 							$records[$i]["email"]=$val;
 							$records[$i]["role"]='"author"';
 						}
@@ -670,6 +671,7 @@ if (! function_exists('array_column')) {
 						unset($data[$key]); // removes this from $data
 					} else {
 						if($key == 'sponsorEmail' && $val != "") {
+							$val = strtolower($val);
 							$records["sponsor"]["email"]=$val;
 							$records["sponsor"]["role"]='"sponsor"';
 							unset($data[$key]); // removes this from $data
