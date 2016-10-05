@@ -30,7 +30,7 @@
     if(isset($_SESSION["studyNumber"])) {
       $incoming["studyNumber"] = $_SESSION["studyNumber"]; // adds studyNumber if available
       $table = 'year'.substr($_SESSION["studyNumber"],0,4); // table is first 4 digits of study number
-      updateApp($mysql,$user,$table,$incoming); // update year2015 table with incoming data
+      updateApp($mysql,$user,$table,$incoming); // update year20xx table with incoming data
     } else { // studyNumber is not yet set
       $table = 'year'.date("Y"); // table is the word 'year' plus the current 4-digit year
 
