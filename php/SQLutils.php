@@ -528,6 +528,7 @@ if (! function_exists('array_column')) {
 			otherInfConsent TEXT NULL,
 			uniqueID TINYINT(1) NULL DEFAULT NULL,
 			uniqueIDtext TEXT NULL,
+			collectedInfo INT NULL,
 			uniqueIDhandling TEXT NULL,
 			uniqueLinked TINYINT(1) NULL DEFAULT NULL,
 			publicDisclose TEXT NULL,
