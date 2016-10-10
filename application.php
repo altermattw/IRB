@@ -219,6 +219,7 @@
               $("#currentStatus").text(data);
               if($.inArray(data,["Submitted to Co-authors","Co-author Approval","Submitted to Faculty Sponsor","Faculty Sponsor Approval","Submitted to IRB","IRB Approval","Withdrawn"]) !== -1) {
                 $(':input[type="text"],textarea:not([name="comments"]):not([name="Classification"]):not([name="category"]):not(".IRB")').prop("readOnly",true); // disable inputs when form is under review
+                $('.IRB').prop("readOnly",false);
                 $(':input:not([type="submit"],[type="text"]):not(textarea):not([name="comments"]):not([name="Classification"]):not([name="category"]):not(".IRB")').prop("disabled",true); // disable inputs when form is under review
                 $('#currentStatus').after(' <span id="editingDisabled" class="label label-danger">Editing disabled</span>');
               }
